@@ -5,7 +5,7 @@ pipeline {
         stage('Build & Tag Docker Image') {
             steps {
                 script {
-                    withDockerRegistry(credentialsId: 'docker-cred) {
+                    withDockerRegistry(credentialsId: 'docker-cred') {
                         sh "docker build -t maheshduwal/microservice:load ."
                     }
                 }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred') {
-                        sh "docker push maheshduwal/microservice:load"
+                        sh "docker push maheshduwal/microservice:load ."
                     }
                 }
             }
