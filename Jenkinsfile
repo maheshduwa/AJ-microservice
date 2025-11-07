@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred') {
-                        sh "docker build -t mahehsduwal/microservice:checkout ."
+                        sh "docker build -t maheshduwal/microservice:checkout ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred') {
-                        sh "docker push mahehsduwal/microservice:checkout"
+                        sh "docker push maheshduwal/microservice:checkout"
                     }
                 }
             }
