@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred') {
-                        sh "docker build -t maheshduawal/microservice:frontend ."
+                        sh "docker build -t maheshduwal/microservice:frontend ."
                     }
                 }
             }
